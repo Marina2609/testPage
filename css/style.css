@@ -303,9 +303,9 @@ a {
   top: 0;
   background: #272733;
   background-image: url(../assets/img/bg.svg);
-  background-repeat: round;
-  background-size: 100% 100%;
-  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top center;
   height: 100%;
 }
 .content .main__complete .complete__container {
@@ -631,9 +631,15 @@ a {
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
-  text-align: right;
+  width: 32px;
+  text-align: left;
   color: rgba(255, 255, 255, 0.85);
   background-color: transparent;
+}
+.content .main__complete .complete__form .form__percentNumber {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 .content .main__complete .complete__form .form__slider {
   -webkit-appearance: none;
@@ -989,6 +995,11 @@ a {
 
   .content .main__info .info__title {
     font-size: 24px;
+    line-height: 28px;
+  }
+
+  .content .main__info .info__subtitle {
+    padding: 5px 0;
   }
 
   .content .main__info .info__subtitle .subtitle__text_bold {
