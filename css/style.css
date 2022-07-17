@@ -498,7 +498,7 @@ a {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: url(/assets/img/main-icon/arroy-down.svg) 96%/3% rgba(255, 255, 255, 0.85);
+  background: url(../assets/img/main-icon/array-down.svg) 96%/3% rgba(255, 255, 255, 0.85);
   background-repeat: no-repeat;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -527,7 +527,7 @@ a {
   color: #272733;
 }
 .content .main__complete .complete__form .form__list select:hover {
-  background: url(/assets/img/main-icon/arroy-up.svg) 96%/3% #3d4050;
+  background: url(../assets/img/main-icon/array-up.svg) 96%/3% #3d4050;
   background-repeat: no-repeat;
   color: #fff;
   cursor: pointer;

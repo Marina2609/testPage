@@ -354,7 +354,7 @@
                 -moz-appearance: none;
                 appearance: none;
 
-                background: url(/assets/img/main-icon/arroy-down.svg) 96% / 3%
+                background: url(../assets/img/main-icon/array-down.svg) 96% / 3%
                   rgba(255, 255, 255, 0.85);
                 background-repeat: no-repeat;
                 box-sizing: border-box;
@@ -372,7 +372,7 @@
                 align-items: center;
                 color: #272733;
                 &:hover {
-                  background: url(/assets/img/main-icon/arroy-up.svg) 96% / 3%
+                  background: url(../assets/img/main-icon/array-up.svg) 96% / 3%
                     $bgColor;
                   background-repeat: no-repeat;
                   color: $white;
