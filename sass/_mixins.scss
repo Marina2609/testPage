@@ -1,0 +1,81 @@
+@mixin contentWidth {
+  max-width: $pageWidth;
+  width: 100%;
+}
+
+@mixin fontLogo {
+  font-family: "Raleway";
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 33px;
+}
+
+@mixin fontMenuTitle {
+  font-family: "Lato";
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 43px;
+}
+
+@mixin fontMenu {
+  font-family: "Lato";
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+@mixin fontMainTitle {
+  font-family: "Lato";
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+}
+
+@mixin fontMainSubtitleBold {
+  font-family: "Lato";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+@mixin fontMainSubtitle {
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+@mixin fontMainBtnsAndFooter {
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+@mixin fontForm {
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+@mixin fontPercent {
+  font-family: "Lato";
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+@mixin fontFormBtn {
+  font-family: "Lato";
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+@mixin fontIconsText {
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}

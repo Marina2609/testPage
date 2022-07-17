@@ -1,0 +1,805 @@
+@import "./reset";
+@import "./variables";
+@import "./mixins";
+
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/Lato-Bold.eot");
+  src: url("../assets/fonts/Lato-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../assets/fonts/Lato-Bold.woff") format("woff"),
+    url("../assets/fonts/Lato-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/Lato-Semibold.eot");
+  src: url("../assets/fonts/Lato-Semibold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/Lato-Semibold.woff") format("woff"),
+    url("../assets/fonts/Lato-Semibold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/Lato-Regular.eot");
+  src: url("../assets/fonts/Lato-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/Lato-Regular.woff") format("woff"),
+    url("../assets/fonts/Lato-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../assets/fonts/Raleway-ExtraBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: hidden;
+  width: 100%;
+
+  .header {
+    width: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    background: rgba(16, 16, 29, 0.9);
+    z-index: 10;
+    &__content {
+      max-width: $wrapperWidth;
+      padding: 0 20px;
+      margin: 33.5px auto 31.5px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        padding-left: 60px;
+        gap: 60px;
+        &__link {
+          color: $white;
+          @include fontMenu;
+          display: flex;
+          align-items: center;
+          text-align: right;
+          text-transform: uppercase;
+          &_active {
+            color: $menuBlue;
+          }
+          &:hover {
+            color: $blue;
+          }
+        }
+      }
+    }
+    &__logo {
+      color: $white;
+      @include fontLogo;
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      span {
+        color: $lightBlue;
+      }
+    }
+  }
+
+  .main {
+    &__wrapper {
+      margin: 0 auto;
+      max-width: $wrapperWidth;
+    }
+    &__info {
+      max-width: 1920px;
+      left: 0px;
+      top: 0px;
+      max-height: 843px;
+      background: $black;
+      background-image: url(../assets/img/image.jpg);
+      background-repeat: round;
+      background-size: 100% 100%;
+      background-position: center center;
+      height: 100%;
+      .info {
+        &__container {
+          padding: 203px 20px;
+        }
+        &__title {
+          @include fontMainTitle;
+          text-transform: uppercase;
+          color: $blue;
+          max-width: 780px;
+          span {
+            color: #000;
+          }
+        }
+        &__subtitle {
+          padding: 80px 0;
+          p {
+            @include fontMainSubtitle;
+            align-items: center;
+            color: $black;
+            padding-bottom: 5px;
+            span {
+              margin: 11px;
+            }
+          }
+          .subtitle__text_bold {
+            @include fontMainSubtitleBold;
+            align-items: center;
+            color: $black;
+            padding-bottom: 10px;
+          }
+        }
+        &__buttons {
+          position: absolute;
+          max-width: 396px;
+          height: 43px;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 30px;
+          .btn {
+            &__order {
+              box-sizing: border-box;
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+              padding: 15px 10px;
+              gap: 10px;
+              width: 183px;
+              height: 43px;
+              background: $blue;
+              border: 1px solid $white;
+              border-radius: 4px;
+              color: $white;
+              @include fontMainBtnsAndFooter;
+              display: flex;
+              align-items: center;
+              text-align: center;
+              text-transform: uppercase;
+              &:hover {
+                cursor: pointer;
+                box-shadow: inset 0 0 0 3px $white;
+              }
+            }
+            &__more {
+              box-sizing: border-box;
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+              padding: 15px 10px;
+              gap: 10px;
+
+              width: 183px;
+              height: 43px;
+              left: 589px;
+              top: 604px;
+              @include fontMainBtnsAndFooter;
+              line-height: 16px;
+              display: flex;
+              align-items: center;
+              text-align: center;
+              text-transform: uppercase;
+              background: $white;
+              border: 1px solid $grey;
+              border-radius: 4px;
+              &:hover {
+                cursor: pointer;
+                box-shadow: inset 0 0 0 3px $grey;
+              }
+            }
+          }
+        }
+      }
+    }
+    &__complete {
+      max-width: 1920px;
+      left: 0px;
+      top: 0;
+      background: #272733;
+      background-image: url(../assets/img/bg.svg);
+      background-repeat: round;
+      background-size: 100% 100%;
+      background-position: center center;
+      height: 100%;
+      .complete {
+        &__container {
+          display: flex;
+          flex-wrap: wrap;
+          row-gap: 80px;
+          padding: 127px 20px;
+          max-width: $wrapperWidth;
+        }
+        &__text {
+          margin: 0 auto;
+          max-width: 555px;
+          width: 100%;
+          height: 94px;
+          display: flex;
+          text-align: center;
+          flex-wrap: wrap;
+        }
+        &__title {
+          width: 429px;
+          margin: 0 auto;
+          @include fontMenuTitle;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-transform: uppercase;
+          flex-wrap: wrap;
+          padding-bottom: 30px;
+          color: $white;
+          span {
+            color: $blue;
+          }
+        }
+        &__subtitle {
+          width: 555px;
+          height: 24px;
+          @include fontForm;
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          align-items: center;
+          margin: 0 auto;
+          color: #bbb;
+        }
+        &__icons {
+          .icons {
+            &__row {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+              align-items: center;
+              padding: 0px;
+              gap: 30px;
+              position: relative;
+            }
+            &__column {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              padding: 0px;
+              width: 209px;
+              height: 164.37px;
+            }
+            &__item {
+              .item {
+                &__icon {
+                  box-sizing: border-box;
+                  width: 100px;
+                  height: 100px;
+                  border-radius: 50%;
+                  background: $blue;
+                  border: 5px solid $borderColor;
+                  margin-right: auto;
+                  margin-left: auto;
+                  img {
+                    position: relative;
+                    display: inline-block;
+                    padding: 18px;
+                  }
+                }
+                &__title {
+                  @include fontIconsText;
+                  text-align: center;
+                  color: $white;
+                  padding-top: 20px;
+                  height: 44px;
+                }
+              }
+            }
+            &__cercle {
+              display: flex;
+              flex-wrap: wrap;
+              position: absolute;
+              top: 1150px;
+              padding-left: 166px;
+              gap: 130px;
+              visibility: visible;
+              .cercle {
+                &__column {
+                  display: flex;
+                  gap: 20px;
+                }
+                &__item {
+                  width: 6px;
+                  height: 6px;
+                  border-radius: 50%;
+                  background: $lightGrey;
+                }
+              }
+            }
+          }
+        }
+        &__form {
+          display: flex;
+          column-gap: 400px;
+          row-gap: 78px;
+          flex-wrap: wrap;
+          .form {
+            &__block {
+              display: flex;
+              gap: 30px;
+              flex-wrap: wrap;
+              width: 100%;
+              justify-content: center;
+            }
+            &__inputs {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 30px;
+              justify-content: center;
+            }
+            &__list {
+              select {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+
+                background: url(/assets/img/main-icon/arroy-down.svg) 96% / 3%
+                  rgba(255, 255, 255, 0.85);
+                background-repeat: no-repeat;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 10px;
+                gap: 5px;
+                width: 370px;
+                height: 48px;
+                border: 1px solid $white;
+                border-radius: 3px;
+                @include fontForm;
+                display: flex;
+                align-items: center;
+                color: #272733;
+                &:hover {
+                  background: url(/assets/img/main-icon/arroy-up.svg) 96% / 3%
+                    $bgColor;
+                  background-repeat: no-repeat;
+                  color: $white;
+                  cursor: pointer;
+                }
+                option {
+                  box-sizing: border-box;
+                  align-items: center;
+                  padding: 10px;
+                  width: 370px;
+                  height: 228px;
+                  background: rgba(39, 39, 51, 0.9);
+                  border: 1px solid $bgColor;
+                  border-radius: 3px;
+                  @include fontForm;
+                  color: $white;
+                  &:checked {
+                    color: $lightBlue;
+                  }
+                }
+              }
+            }
+            &__email-input {
+              input {
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 10px;
+                gap: 5px;
+
+                width: 370px;
+                height: 48px;
+                background: rgba(255, 255, 255, 0.85);
+                border: 1px solid $white;
+                border-radius: 3px;
+
+                @include fontForm;
+                display: flex;
+                align-items: center;
+
+                color: #272733;
+              }
+            }
+            &__name-input {
+              input {
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 10px;
+                gap: 5px;
+
+                width: 370px;
+                height: 48px;
+                background: rgba(255, 255, 255, 0.85);
+                border: 1px solid $white;
+                border-radius: 3px;
+
+                @include fontForm;
+                display: flex;
+                align-items: center;
+
+                color: #272733;
+              }
+            }
+            &__range-container {
+              max-width: 770px;
+              width: 100%;
+            }
+            &__percent {
+              @include fontForm;
+              color: $white;
+              justify-content: space-between;
+              display: flex;
+              input {
+                @include fontPercent;
+
+                text-align: right;
+
+                color: rgba(255, 255, 255, 0.85);
+                background-color: transparent;
+              }
+            }
+            &__slider {
+              -webkit-appearance: none;
+              width: 100%;
+              height: 6px;
+              border-radius: 5px;
+              outline: none;
+              opacity: 0.7;
+              -webkit-transition: 0.2s;
+              transition: opacity 0.2s;
+              &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                background: $lightBlue;
+                border: 3px solid $borderColor;
+                cursor: pointer;
+              }
+              &::-moz-range-thumb {
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                background: $lightBlue;
+                border: 3px solid $borderColor;
+                cursor: pointer;
+              }
+            }
+
+            &__file-input {
+              box-sizing: border-box;
+
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+              padding: 10px;
+              gap: 10px;
+
+              max-width: 370px;
+              width: 100%;
+              height: 48px;
+
+              background: $white;
+              border: 2px solid $blue;
+              border-radius: 3px;
+              &:hover {
+                cursor: pointer;
+                box-shadow: inset 0 0 0 3px $blue;
+              }
+            }
+            &__send-btn {
+              box-sizing: border-box;
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+              padding: 15px 10px;
+              gap: 10px;
+
+              max-width: 370px;
+              width: 100%;
+              height: 48px;
+
+              background: $blue;
+              border: 1px solid $white;
+              border-radius: 4px;
+
+              @include fontFormBtn;
+              display: flex;
+              align-items: center;
+              text-align: center;
+              text-transform: uppercase;
+
+              color: $white;
+              margin: 0 auto;
+              &:hover {
+                cursor: pointer;
+                box-shadow: inset 0 0 0 3px $white;
+              }
+            }
+          }
+        }
+      }
+    }
+    .input__file {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      &-icon {
+        width: 18px;
+        height: 20px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      &-button {
+        display: flex;
+        gap: 10px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      &-button-text {
+        @include fontFormBtn;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        color: #272733;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .footer {
+    left: 0px;
+    bottom: 1px;
+    background: $bgColor;
+    position: relative;
+    @include fontMainBtnsAndFooter;
+    display: flex;
+    align-items: center;
+    &__content {
+      max-width: $wrapperWidth;
+      padding: 0 20px;
+      margin: 33.5px auto 31.5px;
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: center;
+      row-gap: 30px;
+      p {
+        @include fontMainBtnsAndFooter;
+        display: flex;
+        align-items: center;
+        color: $white;
+        margin-right: 41px;
+      }
+      .wallets {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 10px;
+        border-left: 1px solid $footerColor;
+        color: $footerColor;
+        &__qiwi {
+          margin-left: 41px;
+          display: flex;
+          gap: 10px;
+        }
+        &__yandex {
+          display: flex;
+          gap: 10px;
+          margin-left: 41px;
+        }
+        &__web {
+          display: flex;
+          gap: 10px;
+          margin: 0 41px 0 41px;
+        }
+        &__icon {
+          width: 20px;
+          height: 20px;
+        }
+      }
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 10px;
+        border-left: 1px solid $footerColor;
+        display: flex;
+        align-items: center;
+        color: $footerColor;
+        &__mail {
+          display: flex;
+          gap: 13px;
+          color: $white;
+          margin-left: 45px;
+        }
+        .mail_icon {
+          width: 15px;
+          height: 12px;
+        }
+        &__vk {
+          display: flex;
+          gap: 15px;
+          color: $white;
+          margin-left: 45px;
+        }
+        .vk__icon {
+          width: 11px;
+          height: 13px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1209px) {
+  .content .main__info .info__container {
+    padding: 180px 20px;
+  }
+  .content .main__complete .complete__icons .icons__cercle {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 791px) {
+  .content .main__info .info__container {
+    padding: 140px 20px;
+  }
+}
+
+@media screen and (max-width: 779px) {
+  .content .header__content .menu {
+    gap: 30px;
+    padding-left: 0px;
+  }
+
+  .content .main__info .info__title {
+    font-size: 38px;
+  }
+
+  .content .main__info .info__subtitle {
+    padding: 50px 0;
+  }
+}
+
+@media screen and (max-width: 634px) {
+  .content .header__content {
+    margin: 13.5px auto 11.5px;
+    gap: 10px;
+  }
+
+  .content .main__info .info__container {
+    padding: 100px 20px;
+  }
+
+  .content .main__info .info__title {
+    line-height: 38px;
+    font-size: 28px;
+  }
+
+  .content .main__info .info__subtitle {
+    padding: 20px 0;
+  }
+
+  .content .main__complete .complete__container {
+    padding: 77px 20px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .content .main__info .info__container {
+    padding: 90px 20px 60px;
+  }
+
+  .content .main__info .info__buttons {
+    gap: 10px;
+  }
+
+  .content .main__complete .complete__container {
+    padding: 60px 20px;
+  }
+
+  .content .main__info .info__subtitle .subtitle__text_bold {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .content .main__info .info__subtitle p {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .content .main__info .info__buttons .btn__order {
+    width: 133px;
+  }
+
+  .content .main__info .info__buttons .btn__more {
+    width: 133px;
+  }
+
+  .content .main__complete .complete__title {
+    font-size: 26px;
+    line-height: 33px;
+  }
+
+  .content .main__complete .complete__form {
+    row-gap: 48px;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .content .header__content .menu {
+    gap: 8px;
+  }
+
+  .content .main__info .info__title {
+    font-size: 24px;
+  }
+
+  .content .main__info .info__subtitle .subtitle__text_bold {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .content .main__info .info__subtitle p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .content .main__complete .complete__container {
+    padding: 50px 20px;
+    row-gap: 60px;
+  }
+
+  .content .main__complete .complete__icons .icons__row {
+    gap: 10px;
+  }
+
+  .content .main__complete .complete__form .form__list select {
+    width: 280px;
+  }
+
+  .content .main__complete .complete__form .form__email-input input {
+    width: 280px;
+  }
+
+  .content .main__complete .complete__form .form__name-input input {
+    width: 280px;
+  }
+
+  .content .main__complete .complete__form .form__file-input {
+    max-width: 280px;
+  }
+
+  .content .main__complete .complete__form .form__send-btn {
+    max-width: 280px;
+  }
+
+  .content .main__complete .complete__form {
+    row-gap: 38px;
+  }
+}
